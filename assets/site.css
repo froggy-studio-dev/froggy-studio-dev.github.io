@@ -1,0 +1,102 @@
+:root {
+  color-scheme: light;
+  --paper: #faf7f0;
+  --ink: #202039;
+  --muted: #61606b;
+  --purple: #5b267b;
+  --line: #ddd5c9;
+}
+* { box-sizing: border-box; }
+html { scroll-padding-top: 24px; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 17px/1.7 system-ui, -apple-system, "Segoe UI", sans-serif; }
+a { color: var(--purple); text-underline-offset: .22em; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 3px solid #9c5cd1; outline-offset: 6px; border-radius: 2px; }
+img { display: block; max-width: 100%; height: auto; }
+.wrap { width: min(1160px, calc(100% - 96px)); margin-inline: auto; }
+.skip-link { position: absolute; left: 20px; top: -100px; padding: 10px 20px; background: white; z-index: 2; }
+.skip-link:focus { top: 12px; }
+.site-header { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-block: 28px; border-bottom: 1px solid var(--line); }
+.brand { font-size: 24px; line-height: 1.1; font-weight: 800; letter-spacing: -.9px; color: var(--ink); text-decoration: none; white-space: nowrap; }
+.brand span { margin-left: .26em; font-weight: 400; }
+.site-header nav { display: flex; flex-wrap: wrap; gap: 12px 28px; font-size: 14px; }
+.site-header nav a { color: var(--ink); }
+.eyebrow { text-transform: uppercase; font-size: 11px; letter-spacing: .16em; font-weight: 700; color: var(--muted); margin: 0 0 14px; }
+.hero { display: grid; grid-template-columns: 1.07fr 1fr; align-items: center; gap: 72px; padding-block: 70px 66px; }
+.hero h1 { margin: 0 0 12px; font-size: 25px; font-weight: 600; letter-spacing: -.6px; }
+.headline { margin: 0; font: 500 clamp(50px, 5.3vw, 76px)/1.03 Georgia, "Times New Roman", serif; letter-spacing: -2.8px; }
+.intro { max-width: 380px; margin: 26px 0 30px; color: var(--muted); line-height: 1.75; }
+.button { display: inline-flex; gap: 34px; align-items: center; padding: 13px 24px; background: var(--purple); border-radius: 6px; color: #fff9ed; font-size: 15px; font-weight: 600; text-decoration: none; }
+.button:hover { background: #43205c; }
+.game-art { margin: 0; }
+.game-art img { border-radius: 24px; box-shadow: 0 18px 38px #27113122; }
+.game-art figcaption { margin-top: 17px; text-align: center; color: var(--muted); font-size: 12px; letter-spacing: .02em; }
+.support { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 36px; padding-block: 36px 42px; border-top: 1px solid var(--line); }
+.support h2 { font: 500 31px/1.2 Georgia, "Times New Roman", serif; margin: 0 0 12px; }
+.support p:not(.eyebrow) { max-width: 510px; color: var(--muted); font-size: 15px; margin: 0; }
+.email { font-size: 19px; font-weight: 600; overflow-wrap: anywhere; }
+.email span { margin-left: 14px; }
+.site-footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 30px; border-top: 1px solid var(--line); padding-block: 22px 30px; font-size: 12px; color: var(--muted); }
+.site-footer a { color: inherit; }
+.policy-title { padding-block: 54px 34px; }
+.policy h1 { font: 500 clamp(31px, 4.7vw, 55px)/1.15 Georgia, "Times New Roman", serif; letter-spacing: -1.1px; margin: 0 0 28px; overflow-wrap: anywhere; }
+.draft-note { border-left: 3px solid #b2701e; background: #f3eadb; padding: 16px 22px; color: #62431e; font-size: 14px; max-width: 800px; }
+.policy-layout { display: grid; grid-template-columns: 230px minmax(0, 740px); gap: 70px; padding-bottom: 50px; }
+.contents { align-self: start; position: sticky; top: 24px; padding: 16px 0; font-size: 14px; }
+.contents ol { margin: 0; padding-left: 20px; }
+.contents li { margin-bottom: 13px; }
+.contents a { color: var(--muted); text-decoration: none; }
+.contents a:hover { color: var(--purple); text-decoration: underline; }
+.policy-text { min-width: 0; overflow-wrap: anywhere; font-size: 16px; }
+.policy-text p { margin: 0 0 20px; }
+.policy-text h2 { font-size: 24px; line-height: 1.35; margin: 42px 0 20px; padding-top: 22px; border-top: 1px solid var(--line); letter-spacing: -.45px; }
+.policy-text ul { padding-left: 24px; margin: 0 0 20px; }
+.policy-text li { margin-block: 8px; }
+.policy-text code { font: .9em/1.6 Consolas, monospace; }
+.table-scroll { max-width: 100%; overflow-x: auto; margin-bottom: 24px; }
+.table-scroll:focus-visible { outline: 3px solid #9c5cd1; outline-offset: 3px; }
+.policy-text table { border-collapse: collapse; min-width: 550px; width: 100%; font-size: 14px; line-height: 1.6; }
+.policy-text caption { text-align: left; padding-bottom: 12px; font-weight: 600; }
+.policy-text th, .policy-text td { text-align: left; vertical-align: top; padding: 12px; border: 1px solid var(--line); }
+.policy-text th { background: #f0e9df; }
+.policy-text th:first-child { min-width: 130px; width: 20%; }
+.policy-text .pending { display: block; padding: 13px 17px; border: 1px dashed #b2701e; background: #f3eadb; color: #62431e; font-size: 13px; font-weight: 500; }
+@media (max-width: 960px) {
+  .wrap { width: calc(100% - 64px); }
+  .hero { gap: 38px; padding-block: 52px; }
+  .headline { font-size: 55px; }
+  .support { grid-template-columns: 1fr; gap: 20px; }
+  .policy-layout { grid-template-columns: 190px minmax(0, 1fr); gap: 32px; }
+}
+@media (max-width: 640px) {
+  .wrap { width: calc(100% - 40px); }
+  .site-header { align-items: start; padding-block: 22px; gap: 12px; }
+  .brand { font-size: 21px; }
+  .site-header nav { justify-content: end; gap: 4px; font-size: 12px; }
+  .home .site-header nav { flex-direction: column; align-items: end; }
+  .hero { grid-template-columns: 1fr; gap: 34px; padding-block: 38px; }
+  .hero-copy { max-width: 440px; }
+  .headline { font-size: clamp(46px, 13vw, 65px); letter-spacing: -1.8px; }
+  .intro { margin: 20px 0 24px; font-size: 16px; }
+  .game-art { max-width: 440px; justify-self: center; }
+  .game-art img { border-radius: 18px; }
+  .support { padding-block: 30px; }
+  .support h2 { font-size: 27px; }
+  .email { font-size: 18px; }
+  .policy-title { padding-block: 32px 24px; }
+  .policy h1 { letter-spacing: -.8px; }
+  .policy-layout { grid-template-columns: 1fr; gap: 24px; }
+  .contents { position: static; border-bottom: 1px solid var(--line); padding-block: 0 20px; }
+  .contents li { margin-bottom: 8px; }
+  .policy-text h2 { font-size: 22px; }
+}
+@media print {
+  .site-header, .site-footer, .contents, .skip-link { display: none; }
+  .wrap { width: 100%; }
+  .policy-layout { display: block; }
+  .policy-text { font-size: 11pt; }
+  .policy-text h2 { break-after: avoid; }
+  .policy-title { padding: 0; }
+  .policy h1 { font-size: 26pt; }
+  body { background: white; }
+}
